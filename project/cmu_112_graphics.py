@@ -174,6 +174,8 @@ def failedImport(importName, installName=None):
 try: from PIL import Image, ImageTk, ImageDraw, ImageFont
 except ModuleNotFoundError: failedImport('PIL', 'pillow')
 
+# from PIL.Image import core as _imaging
+
 if sys.platform.startswith('linux'):
     try: import pyscreenshot as ImageGrabber
     except ModuleNotFoundError: failedImport('pyscreenshot')
